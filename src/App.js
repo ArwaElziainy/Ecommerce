@@ -24,11 +24,9 @@ import AllOrders from "./Components/AllOrders/AllOrders";
 function App() {
   let routers = createBrowserRouter([
     {
-      Path: "",
-      element: <Layout />,
-      children: [
-        { path: "", element: <Navigate to={"home"} /> },
-        { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
+      Path: "",element: <Layout />,children: [
+        { path: "", element: <ProtectedRoute><Home /></ProtectedRoute>},
+        { path: "home", element: <Navigate to="/"/> },
         { path: "login", element: <LoginProtected><Login /></LoginProtected> },
         { path: "register", element: <Register /> },
         { path: "forget-password", element: <ForgetPassword /> },
