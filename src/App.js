@@ -28,7 +28,7 @@ function App() {
       Path: "",
       element: <Layout />,
       children: [
-        { path: "Ecommerce", element: <Navigate to={""} /> },
+        { path: "Ecommerce", element: <Navigate to={"login"} /> },
         { path: "", element: <Navigate to={"home"} /> },
         { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
         { path: "login", element: <LoginProtected><Login /></LoginProtected> },
