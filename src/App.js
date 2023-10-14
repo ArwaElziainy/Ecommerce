@@ -18,7 +18,6 @@ import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Wishlist from "./Components/Wishlist/Wishlist";
 import CheckoutForm from "./Components/CheckoutForm/CheckoutForm";
 import AllOrders from "./Components/AllOrders/AllOrders";
-import Search from "./Components/Search/Search";
 
 
 
@@ -28,7 +27,6 @@ function App() {
       Path: "",
       element: <Layout />,
       children: [
-        { path: "Ecommerce/home", element: <Navigate to={""} /> },
         { path: "", element: <Navigate to={"home"} /> },
         { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
         { path: "login", element: <LoginProtected><Login /></LoginProtected> },
@@ -45,7 +43,6 @@ function App() {
         { path: "wishlist", element: <ProtectedRoute><Wishlist /></ProtectedRoute> },
         { path: "checkout/:id", element: <ProtectedRoute><CheckoutForm /></ProtectedRoute> },
         { path: "allorders", element: <ProtectedRoute><AllOrders /></ProtectedRoute> },
-        { path: "search", element: <ProtectedRoute><Search /></ProtectedRoute> },
 
         { path: "*", element: <NotFound /> },
       ],
