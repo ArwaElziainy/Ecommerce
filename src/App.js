@@ -29,7 +29,7 @@ function App() {
       element: <Layout />,
       children: [
         { path: "", element: <Navigate to={"home"} /> },
-        { path: "Ecommerce/", element: <Navigate to={"home"} /> },
+        { path: "Ecommerce", element: <Navigate to={"home"} /> },
         { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
         { path: "login", element: <LoginProtected><Login /></LoginProtected> },
         { path: "register", element: <Register /> },
