@@ -7,7 +7,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Products from "./Components/Products/Products";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {  createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import ForgetPassword from "./Components/ForgetPass/Forget-Password";
 import ResetPassword from "./Components/ResetPass/ResetPassword";
 import VerifyCode from "./Components/VerifyCode/VerifyCode";
@@ -22,7 +22,7 @@ import AllOrders from "./Components/AllOrders/AllOrders";
 
 
 function App() {
-  let routers = createBrowserRouter([
+  let routers = createHashRouter([
     {
       Path: "",element: <Layout />,children: [
         { path: "", element: <ProtectedRoute><Home /></ProtectedRoute>},
